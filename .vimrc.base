@@ -1,0 +1,74 @@
+"===========================================================================
+"--------------------------------------------------------------------------
+"   Color scheme
+"--------------------------------------------------------------------------
+"===========================================================================
+syntax on
+colorscheme molokai 
+
+"===========================================================================
+"--------------------------------------------------------------------------
+"   dict and syntax files
+"--------------------------------------------------------------------------
+"===========================================================================
+autocmd FileType php :set dictionary=/usr/share/vim/vim73/dict/wordpress.dict
+"autocmd BufEnter *.php :set syn=wordpress
+
+
+"===========================================================================
+"--------------------------------------------------------------------------
+"   My general  setting
+"--------------------------------------------------------------------------
+"===========================================================================
+
+set nocompatible " nocompatible with vi
+set noinsertmode " ban insert mode to be the default
+set wrap " word wrap
+set backspace=1 " enables backspace deletion
+set noerrorbells " no bell when there are errors
+set cmdheight=1 " height of command line
+set shortmess=t " 'Press RETURN or enter command to continue' を表示しない
+set ignorecase " igonore letter cases if they are only small検索文字列が小文字のみの場合、大文字･小文字を区別しない
+set smartcase " distinguish letter cases
+set history=100 " the number of the saved commands
+set wildmode=list:longest " コマンドライン補完をシェルと同じに
+set magic " put majic mode on when using regexp
+set incsearch " immediate jump to search words
+set hlsearch " highlight search words
+set iminsert=1 " go to command mode even if Jap 
+set number 
+set listchars=tab:-\ " alternate letter for tab
+set list " display tab
+set tabstop=4 " width of tab
+set shiftwidth=4 " width of indent
+set expandtab
+set wrapscan " return to the head when search is done
+set et laststatus=2  "always display status line 
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%04B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+set showmatch " temporary move to end of bra
+set showcmd " display command
+map + <C-W><S-+>
+set smartindent
+set backspace=start,eol,indent
+set imdisable " ime off return to command mode
+set nobackup " dont creat backup file
+
+" change tab width
+nmap <Space>sh0 ;set shiftwidth=0<CR>
+nmap <Space>sh2 ;set shiftwidth=2<CR>
+nmap <Space>sh4 ;set shiftwidth=4<CR>
+
+nmap <Space>sw0 ;set tabstop=0<CR>
+nmap <Space>sw2 ;set tabstop=2<CR>
+nmap <Space>sw4 ;set tabstop=4<CR>
+
+" keymapping in insert mode
+imap <C-j> <Down>
+imap <C-k> <Up>
+imap <C-h> <Left>
+imap <C-l> <Right>
+" exchange colom and semicolon
+noremap ; :
+noremap : ;
+
+" esc switch ime off"
