@@ -1,0 +1,31 @@
+ "===========================================================================
+ "--------------------------------------------------------------------------
+ "   macvim setting
+ "--------------------------------------------------------------------------
+ "===========================================================================
+
+if has('gui_macvim')
+" :VimShell
+    set transparency=8   " 透明度を指定
+    set antialias
+    set guioptions-=t   " ツールバー非表示
+    set guioptions-=r   " 右スクロールバー非表示
+    set guioptions-=R
+    set guioptions-=l   " 左スクロールバー非表示
+    set guioptions-=L
+  nnoremap <silent> <C-Z> :sh<CR>
+
+    set imdisable      " IM-off only normal mode shift
+    
+    "固定ウィンドウサイズ
+   set lines=90 columns=240
+    "フルスクリーンモード   
+    "set fuoptions=maxvert,maxhorz
+    " autocmd GUIEnter * set fullscreen
+
+
+    "フォント設定
+    "set guifont=Inconsolata:h14
+    set guifont=DejaVuSansMono:h13
+endif
+
