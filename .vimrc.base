@@ -39,36 +39,16 @@ set iminsert=1 " go to command mode even if Jap
 set number 
 set listchars=tab:-\ " alternate letter for tab
 set list " display tab
-set tabstop=4 " width of tab
-set shiftwidth=4 " width of indent
+set tabstop=2 " width of tab
+set shiftwidth=2 " width of indent
 set expandtab
 set wrapscan " return to the head when search is done
 set et laststatus=2  "always display status line 
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%04B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set showmatch " temporary move to end of bra
 set showcmd " display command
-map + <C-W><S-+>
 set smartindent
 set backspace=start,eol,indent
 set imdisable " ime off return to command mode
 set nobackup " dont creat backup file
 
-" change tab width
-nmap <Space>sh0 ;set shiftwidth=0<CR>
-nmap <Space>sh2 ;set shiftwidth=2<CR>
-nmap <Space>sh4 ;set shiftwidth=4<CR>
-
-nmap <Space>sw0 ;set tabstop=0<CR>
-nmap <Space>sw2 ;set tabstop=2<CR>
-nmap <Space>sw4 ;set tabstop=4<CR>
-
-" keymapping in insert mode
-imap <C-j> <Down>
-imap <C-k> <Up>
-imap <C-h> <Left>
-imap <C-l> <Right>
-" exchange colom and semicolon
-noremap ; :
-noremap : ;
-
-" esc switch ime off"

@@ -124,3 +124,6 @@ nmap <Space>tr ;NERDTree<CR>
 nmap <Space>bc ;ChromeReloadStart<CR>
 nmap <Space>bC ;ChromeReloadStop<CR>
 
+
+" calendar
+let g:calendar_google_calendar = 1

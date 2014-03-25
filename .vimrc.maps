@@ -1,0 +1,18 @@
+map + <C-W><S-+>
+" change tab width
+nmap <Space>sh0 ;set shiftwidth=0<CR>
+nmap <Space>sh2 ;set shiftwidth=2<CR>
+nmap <Space>sh4 ;set shiftwidth=4<CR>
+
+nmap <Space>sw0 ;set tabstop=0<CR>
+nmap <Space>sw2 ;set tabstop=2<CR>
+nmap <Space>sw4 ;set tabstop=4<CR>
+
+" keymapping in insert mode
+imap <C-j> <Down>
+imap <C-k> <Up>
+imap <C-h> <Left>
+imap <C-l> <Right>
+" exchange colom and semicolon
+noremap ; :
+noremap : ;

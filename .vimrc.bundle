@@ -36,6 +36,9 @@ NeoBundle 'kloppster/Wordpress-Vim-Syntax.git'
 NeoBundle 'cakebaker/scss-syntax.vim.git'
 NeoBundle 'briancollins/vim-jst.git'
 NeoBundle 'wakatime/vim-wakatime'
+NeoBundle 'itchyny/calendar.vim'
+NeoBundle 'sakuraiyuta/commentout.vim'
+NeoBundle 'godlygeek/tabular'
 
 "enable file type plugin load
 filetype plugin indent on
