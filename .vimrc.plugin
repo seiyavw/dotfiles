@@ -1,5 +1,7 @@
 
-" neocomplcache setting
+" -----------------------------------------
+"  neocomplcache setting
+" -----------------------------------------
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
@@ -90,23 +92,35 @@ let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
 
-" NERDTree setting
+" -----------------------------------------
+" # NERDTree setting
+" -----------------------------------------
+
 " always current file directory
-let g:NERDTreeChDirMode=2
+let g:NERDTreeChDirMode = 2
 " auto open by vim-command without auguments
 let file_name = expand("%")
 if has('vim_starting') &&  file_name == ""
     autocmd VimEnter * NERDTree ./
 endif
+" show hidden files
+let NERDTreeShowHidden = 1
+" ignore specific hidden files
+let NERDTreeIgnore = ['.DS_Store', '.sass-cache', '\.swp$']
 
 
+" -----------------------------------------
 " Brosereload-mac setting
+" -----------------------------------------
+
 let g:returnApp = "MacVim"
 
-
+" -----------------------------------------
 " unite vim setting
+" -----------------------------------------
+
 " 入力モードで開始する
- let g:unite_enable_start_insert=1
+ let g:unite_enable_start_insert = 1
 " ファイル一覧
  nnoremap <silent> ;uf :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
 " 常用セット
@@ -119,11 +133,15 @@ let g:returnApp = "MacVim"
  imap <C-u> <Plug>(neocomplcache_start_unite_complete)
 
 
+" -----------------------------------------
 " plugin keymapping
+" -----------------------------------------
+"
 nmap <Space>tr ;NERDTree<CR>
 nmap <Space>bc ;ChromeReloadStart<CR>
 nmap <Space>bC ;ChromeReloadStop<CR>
 
-
+" -----------------------------------------
 " calendar
+" -----------------------------------------
 let g:calendar_google_calendar = 1
