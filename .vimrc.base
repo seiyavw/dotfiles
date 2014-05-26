@@ -51,9 +51,10 @@ set showmatch " temporary move to end of bra
 set showcmd " display command
 set smartindent
 set backspace=start,eol,indent
-set imdisable " ime off return to command mode
-set nobackup " dont creat backup file
-set noundofile " not create undo file
+set imdisable  " ime off return to command mode
+set nobackup   " doesn't creat backup file
+set noundofile " doesn't create undo file
+set noswapfile " doesn't create swap file
 
 
 " delete spaces at the end of line when saving
