@@ -13,6 +13,7 @@ imap <C-j> <Down>
 imap <C-k> <Up>
 imap <C-h> <Left>
 imap <C-l> <Right>
+
 " exchange colom and semicolon
 noremap ; :
 noremap : ;

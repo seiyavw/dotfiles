@@ -1,4 +1,8 @@
-"NeoBundle start setting
+"===============================
+"-------------------------------
+"   NeoBundle start setting
+"-------------------------------
+"===============================
 
 set nocompatible
 filetype plugin indent off

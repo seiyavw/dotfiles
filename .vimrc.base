@@ -1,25 +1,27 @@
-"===========================================================================
-"--------------------------------------------------------------------------
-"   Color scheme
-"--------------------------------------------------------------------------
-"===========================================================================
+"===============================
+"-------------------------------
+"        Color scheme
+"-------------------------------
+"===============================
+"
 syntax on
-colorscheme molokai 
+colorscheme molokai
 
-"===========================================================================
-"--------------------------------------------------------------------------
+"===============================
+"-------------------------------
 "   dict and syntax files
-"--------------------------------------------------------------------------
-"===========================================================================
+"-------------------------------
+"===============================
+"
 autocmd FileType php :set dictionary=/usr/share/vim/vim73/dict/wordpress.dict
 "autocmd BufEnter *.php :set syn=wordpress
 
 
-"===========================================================================
-"--------------------------------------------------------------------------
+"===============================
+"-------------------------------
 "   My general  setting
-"--------------------------------------------------------------------------
-"===========================================================================
+"-------------------------------
+"===============================
 
 set nocompatible " nocompatible with vi
 set noinsertmode " ban insert mode to be the default
@@ -35,15 +37,15 @@ set wildmode=list:longest " コマンドライン補完をシェルと同じに
 set magic " put majic mode on when using regexp
 set incsearch " immediate jump to search words
 set hlsearch " highlight search words
-set iminsert=1 " go to command mode even if Jap 
-set number 
+set iminsert=1 " go to command mode even if Jap
+set number
 set listchars=tab:-\ " alternate letter for tab
 set list " display tab
-set tabstop=2 " width of tab
-set shiftwidth=2 " width of indent
+set tabstop=4 " width of tab
+set shiftwidth=4 " width of indent
 set expandtab
 set wrapscan " return to the head when search is done
-set et laststatus=2  "always display status line 
+set et laststatus=2  "always display status line
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%04B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set showmatch " temporary move to end of bra
 set showcmd " display command
@@ -51,4 +53,10 @@ set smartindent
 set backspace=start,eol,indent
 set imdisable " ime off return to command mode
 set nobackup " dont creat backup file
+set noundofile " not create undo file
 
+
+" delete spaces at the end of line when saving
+autocmd BufWritePre * :%s/\s\+$//ge
+" replaces spaces for tabs when saving
+autocmd BufWritePre * :%s/\t/    /ge
