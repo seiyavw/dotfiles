@@ -41,8 +41,6 @@ set iminsert=1 " go to command mode even if Jap
 set number
 set listchars=tab:-\ " alternate letter for tab
 set list " display tab
-set tabstop=4 " width of tab
-set shiftwidth=4 " width of indent
 set expandtab
 set wrapscan " return to the head when search is done
 set et laststatus=2  "always display status line
@@ -56,8 +54,18 @@ set nobackup   " doesn't creat backup file
 set noundofile " doesn't create undo file
 set noswapfile " doesn't create swap file
 
+" default indent
+set tabstop=4 " width of tab
+set shiftwidth=4 " width of indent
+" filetype indent
+augroup vimrc
+autocmd! FileType html          setlocal shiftwidth=0 tabstop=0 softtabstop=0
+autocmd! FileType css           setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd! FileType javascript    setlocal shiftwidth=2 tabstop=2 softtabstop=2
+augroup END
 
 " delete spaces at the end of line when saving
 autocmd BufWritePre * :%s/\s\+$//ge
 " replaces spaces for tabs when saving
 autocmd BufWritePre * :%s/\t/    /ge
+
