@@ -55,13 +55,17 @@ set noundofile " doesn't create undo file
 set noswapfile " doesn't create swap file
 
 " default indent
-set tabstop=4 " width of tab
-set shiftwidth=4 " width of indent
+set tabstop=2 " width of tab
+set shiftwidth=2 " width of indent
 " filetype indent
 augroup vimrc
-autocmd! FileType html          setlocal shiftwidth=0 tabstop=0 softtabstop=0
+autocmd! FileType html          setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd! FileType css           setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd! FileType scss          setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd! FileType sass          setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd! FileType javascript    setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd! FileType jade          setlocal shiftwidth=2 tabstop=2 softtabstop=2
+
 augroup END
 
 " delete spaces at the end of line when saving
