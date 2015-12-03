@@ -1,8 +1,5 @@
-"===============================
-"-------------------------------
-"   NeoBundle start setting
-"-------------------------------
-"===============================
+
+" NeoBundle start setting
 
 set nocompatible
 filetype plugin indent off
@@ -43,6 +40,16 @@ NeoBundle 'wakatime/vim-wakatime'
 NeoBundle 'itchyny/calendar.vim'
 NeoBundle 'sakuraiyuta/commentout.vim'
 NeoBundle 'godlygeek/tabular'
+NeoBundle 'h1mesuke/vim-alignta.git'
+NeoBundle 'tikhomirov/vim-glsl'
+NeoBundle 'beyondmarc/hlsl.vim'
+NeoBundle 'slim-template/vim-slim'
+NeoBundle 'sophacles/vim-processing'
+NeoBundle 'sudar/vim-arduino-syntax'
+NeoBundle 'tyru/caw.vim.git'
+NeoBundle 'glsl.vim'
+NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'isRuslan/vim-es6'
 
 "enable file type plugin load
 filetype plugin indent on

@@ -1,27 +1,15 @@
-"===============================
-"-------------------------------
-"        Color scheme
-"-------------------------------
-"===============================
-"
+" Color scheme
+
 syntax on
 colorscheme molokai
 
-"===============================
-"-------------------------------
-"   dict and syntax files
-"-------------------------------
-"===============================
-"
+" dict and syntax files
+
 autocmd FileType php :set dictionary=/usr/share/vim/vim73/dict/wordpress.dict
 "autocmd BufEnter *.php :set syn=wordpress
 
 
-"===============================
-"-------------------------------
-"   My general  setting
-"-------------------------------
-"===============================
+" My general  setting
 
 set nocompatible " nocompatible with vi
 set noinsertmode " ban insert mode to be the default
@@ -47,6 +35,7 @@ set et laststatus=2  "always display status line
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%04B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set showmatch " temporary move to end of bra
 set showcmd " display command
+set autoindent
 set smartindent
 set backspace=start,eol,indent
 set imdisable  " ime off return to command mode
@@ -55,8 +44,9 @@ set noundofile " doesn't create undo file
 set noswapfile " doesn't create swap file
 
 " default indent
-set tabstop=2 " width of tab
-set shiftwidth=2 " width of indent
+set tabstop=4 " width of tab
+set shiftwidth=4 " width of indent
+
 " filetype indent
 augroup vimrc
 autocmd! FileType html          setlocal shiftwidth=2 tabstop=2 softtabstop=2
@@ -65,6 +55,9 @@ autocmd! FileType scss          setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd! FileType sass          setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd! FileType javascript    setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd! FileType jade          setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd! FileType eruby         setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd! FileType shader        setlocal shiftwidth=4 tabstop=4 softtabstop=4
+autocmd! FileType arduino       setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 augroup END
 
@@ -72,4 +65,3 @@ augroup END
 autocmd BufWritePre * :%s/\s\+$//ge
 " replaces spaces for tabs when saving
 autocmd BufWritePre * :%s/\t/    /ge
-

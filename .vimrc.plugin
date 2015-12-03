@@ -1,7 +1,4 @@
-
-" ----------------------------
-"  neocomplcache setting
-" ----------------------------
+" neocomplcache setting
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
@@ -51,26 +48,6 @@ let g:NeoComplCache_SkipInputTime = '0.5'
 inoremap <expr><Up> pumvisible() ? neocomplcache#close_popup()."\<Up>" : "\<Up>"
 inoremap <expr><Down> pumvisible() ? neocomplcache#close_popup()."\<Down>" : "\<Down>"
 inoremap <expr><CR> pumvisible() ? neocomplcache#close_popup() : "\<CR>"
-"" <TAB>: completion.
-" For cursor moving in insert mode(Not recommended)
-"inoremap <expr><Left>  neocomplcache#close_popup() . "\<Left>"
-"inoremap <expr><Right> neocomplcache#close_popup() . "\<Right>"
-"inoremap <expr><Up>    neocomplcache#close_popup() . "\<Up>"
-"inoremap <expr><Down>  neocomplcache#close_popup() . "\<Down>"
-" Or set this.
-"let g:neocomplcache_enable_cursor_hold_i = 1
-" Or set this.
-"let g:neocomplcache_enable_insert_char_pre = 1
-
-" AutoComplPop like behavior.
-"let g:neocomplcache_enable_auto_select = 1
-
-" Shell like behavior(not recommended).
-"set completeopt+=longest
-"let g:neocomplcache_enable_auto_select = 1
-"let g:neocomplcache_disable_auto_complete = 1
-"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
-"inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
 inoremap <expr><TAB> pumvisible() ? "\<Down>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<Up>" : "\<S-TAB>"
 
@@ -92,9 +69,7 @@ let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
 
-" ----------------------------
 " # NERDTree setting
-" ----------------------------
 
 " always current file directory
 let g:NERDTreeChDirMode = 2
@@ -109,15 +84,11 @@ let NERDTreeShowHidden = 1
 let NERDTreeIgnore = ['.DS_Store', '.sass-cache', '\.swp$']
 
 
-" ----------------------------
 " Brosereload-mac setting
-" ----------------------------
 
 let g:returnApp = "MacVim"
 
-" ----------------------------
 " unite vim setting
-" ----------------------------
 
 " 入力モードで開始する
  let g:unite_enable_start_insert = 1
@@ -133,15 +104,18 @@ let g:returnApp = "MacVim"
  imap <C-u> <Plug>(neocomplcache_start_unite_complete)
 
 
-" ----------------------------
 " plugin keymapping
-" ----------------------------
-"
+
 nmap <Space>tr ;NERDTree<CR>
 nmap <Space>bc ;ChromeReloadStart<CR>
 nmap <Space>bC ;ChromeReloadStop<CR>
 
-" ----------------------------
 " calendar
-" ----------------------------
+"
 let g:calendar_google_calendar = 1
+
+" processing-vim
+au BufNewFile,BufRead *.pde setf processing
+" caw.vim
+nmap <D-/> <Plug>(caw:i:toggle)
+vmap <D-/> <Plug>(caw:i:toggle)
