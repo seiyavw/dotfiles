@@ -1,20 +1,24 @@
-
 " NeoBundle start setting
 
 set nocompatible
 filetype plugin indent off
 
 if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim
-    call neobundle#rc(expand('~/.vim/bundle/'))
+    if &compatible
+        set compatible
+    endif
+"    set rtp+=~/dotfiles/neobundle.vim/
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 "install items
 NeoBundle 'tpope/vim-surround.git'
 NeoBundle 'tpope/vim-repeat.git'
 NeoBundle 'Shougo/neocomplcache.git'
 "NeoBundle 'Shougo/neocomplcache-snippets-complete.git'
-NeoBundle 'git://github.com/Shougo/unite.vim.git'
+NeoBundle 'Shougo/unite.vim.git'
 NeoBundle 'Shougo/vimproc.git'
 NeoBundle 'Shougo/vimshell.git'
 NeoBundle 'thinca/vim-quickrun.git'
@@ -42,6 +46,7 @@ NeoBundle 'sakuraiyuta/commentout.vim'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'h1mesuke/vim-alignta.git'
 NeoBundle 'tikhomirov/vim-glsl'
+NeoBundle 'battlesnake/vim-webgl'
 NeoBundle 'beyondmarc/hlsl.vim'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'sophacles/vim-processing'
@@ -50,6 +55,9 @@ NeoBundle 'tyru/caw.vim.git'
 NeoBundle 'glsl.vim'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'isRuslan/vim-es6'
+NeoBundle 'OmniSharp/omnisharp-vim'
+
+call neobundle#end()
 
 "enable file type plugin load
 filetype plugin indent on
