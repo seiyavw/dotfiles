@@ -86,6 +86,8 @@ sysinfo.txt
 *.unitypackage
 
 #VSCode Plugins
+VSCode
 VSCode.cs
 VSCode.meta
 .vscode
+
