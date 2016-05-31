@@ -1,4 +1,6 @@
-" neocomplcache setting
+" ################################
+"     neocomplcache setting
+" ################################
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
@@ -20,6 +22,8 @@ let g:neocomplcache_dictionary_filetype_lists = {
     \ 'vimshell' : $HOME.'/.vimshell_hist',
     \ 'scheme' : $HOME.'/.gosh_completions',
     \ 'scss' : $HOME.'/.vim/dict/css.dict',
+    \ 'php' : $HOME.'/.vim/dict/wordpress.dict',
+    \ 'cs' : $HOME.'/.vim/dict/unity.dict'
     \ }
 
 " Define keyword.
@@ -69,7 +73,25 @@ let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
 
-" # NERDTree setting
+" OmniSharp
+if !exists('g:neocomplcache_force_omni_patterns')
+  let g:neocomplcache_force_omni_patterns = {}
+endif
+let g:neocomplcache_force_omni_patterns.cs = '[^.]\.\%(\u\{2,}\)\?'
+
+let g:OmniSharp_selector_ui = 'unite'
+
+" rsense
+if !exists('g:neocomplete#force_omni_input_patterns')
+    let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+let g:neocomplete#sources#rsense#home_directory = '/usr/local/bin/rsense'
+
+
+" ################################
+"       NERDTree setting
+" ################################
 
 " always current file directory
 let g:NERDTreeChDirMode = 2
@@ -84,12 +106,11 @@ let NERDTreeShowHidden = 1
 let NERDTreeIgnore = ['.DS_Store', '.sass-cache', '\.swp$']
 
 
-" Brosereload-mac setting
-
+" ##### Brosereload-mac setting #####
 let g:returnApp = "MacVim"
 
-" unite vim setting
 
+" ##### unite vim setting #####
 " 入力モードで開始する
  let g:unite_enable_start_insert = 1
 " ファイル一覧
@@ -104,17 +125,13 @@ let g:returnApp = "MacVim"
  imap <C-u> <Plug>(neocomplcache_start_unite_complete)
 
 
-" plugin keymapping
+" ##### plugin keymapping #####
 
 nmap <Space>tr ;NERDTree<CR>
 nmap <Space>bc ;ChromeReloadStart<CR>
 nmap <Space>bC ;ChromeReloadStop<CR>
 
-" calendar
-"
-let g:calendar_google_calendar = 1
-
-" processing-vim
+" ##### processing-vim #####
 au BufNewFile,BufRead *.pde setf processing
 " caw.vim
 nmap <D-/> <Plug>(caw:i:toggle)

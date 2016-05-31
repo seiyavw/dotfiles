@@ -3,12 +3,6 @@
 syntax on
 colorscheme molokai
 
-" dict and syntax files
-
-autocmd FileType php :set dictionary=/usr/share/vim/vim73/dict/wordpress.dict
-"autocmd BufEnter *.php :set syn=wordpress
-
-
 " My general  setting
 
 set nocompatible " nocompatible with vi
@@ -44,8 +38,11 @@ set noundofile " doesn't create undo file
 set noswapfile " doesn't create swap file
 
 " default indent
-set tabstop=4 " width of tab
-set shiftwidth=4 " width of indent
+set tabstop=2 " width of tab
+set shiftwidth=2 " width of indent
+
+" Filetype defs
+" autocmd BufNewFile,BufRead *.jade set filetype=jade
 
 " filetype indent
 augroup vimrc
@@ -55,6 +52,7 @@ autocmd! FileType scss          setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd! FileType sass          setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd! FileType javascript    setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd! FileType jade          setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd! FileType pug           setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd! FileType eruby         setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd! FileType shader        setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd! FileType arduino       setlocal shiftwidth=2 tabstop=2 softtabstop=2

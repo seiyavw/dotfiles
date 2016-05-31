@@ -13,20 +13,17 @@ endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 
-"install items
+" install items
 NeoBundle 'tpope/vim-surround.git'
 NeoBundle 'tpope/vim-repeat.git'
 NeoBundle 'Shougo/neocomplcache.git'
-"NeoBundle 'Shougo/neocomplcache-snippets-complete.git'
 NeoBundle 'Shougo/unite.vim.git'
 NeoBundle 'Shougo/vimproc.git'
 NeoBundle 'Shougo/vimshell.git'
 NeoBundle 'thinca/vim-quickrun.git'
 NeoBundle 'mattn/emmet-vim.git'
-"NeoBundle 'git://github.com/c9s/perlomni.vim.git'
 NeoBundle 'altercation/vim-colors-solarized.git'
 NeoBundle 'Lokaltog/vim-powerline.git'
-"NeoBundle 'git://github.com/scrooloose/syntastic.git'
 NeoBundle 'othree/eregex.vim.git'
 NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
@@ -53,9 +50,19 @@ NeoBundle 'sophacles/vim-processing'
 NeoBundle 'sudar/vim-arduino-syntax'
 NeoBundle 'tyru/caw.vim.git'
 NeoBundle 'glsl.vim'
-NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'digitaltoad/vim-pug'
 NeoBundle 'isRuslan/vim-es6'
-NeoBundle 'OmniSharp/omnisharp-vim'
+NeoBundle 'tpope/vim-rails'
+
+" Lazy
+NeoBundleLazy 'OmniSharp/omnisharp-vim', {
+      \   'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] },
+      \   'build': {
+      \     'windows' : 'msbuild server/OmniSharp.sln',
+      \     'mac': 'xbuild server/OmniSharp.sln',
+      \     'unix': 'xbuild server/OmniSharp.sln',
+      \   },
+      \ }
 
 call neobundle#end()
 
