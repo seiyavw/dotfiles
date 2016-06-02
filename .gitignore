@@ -5,12 +5,12 @@
 .DS_Store
 *.DS_Store
 
-# Ignore all logfiles and tempfiles.
+# ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
 vendor/bundle
 
-# Ignore swap files
+# ignore vim swap files
 *.swp
 *.un~
 
@@ -52,9 +52,13 @@ Pods
 /db/*.sqlite3
 
 # ----------------------
-#    for Unity
+#    openFrameworks
 # ----------------------
-#
+*.app
+
+# ----------------------
+#         Unity
+# ----------------------
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -91,3 +95,29 @@ VSCode.cs
 VSCode.meta
 .vscode
 
+
+# ----------------------
+#         Rails
+# ----------------------
+# Ignore bundler config.
+/.bundle
+
+# Ignore bundler gems.
+vendor/bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+
+# Ignore other unneeded files.
+doc/
+*.swp
+*~
+.project
+.DS_Store
+.idea
+.secret
