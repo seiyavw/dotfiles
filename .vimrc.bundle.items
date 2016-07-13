@@ -41,6 +41,7 @@ NeoBundle 'wakatime/vim-wakatime'
 NeoBundle 'itchyny/calendar.vim'
 NeoBundle 'sakuraiyuta/commentout.vim'
 NeoBundle 'godlygeek/tabular'
+NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'h1mesuke/vim-alignta.git'
 NeoBundle 'tikhomirov/vim-glsl'
 NeoBundle 'battlesnake/vim-webgl'
@@ -53,6 +54,9 @@ NeoBundle 'glsl.vim'
 NeoBundle 'digitaltoad/vim-pug'
 NeoBundle 'isRuslan/vim-es6'
 NeoBundle 'tpope/vim-rails'
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'tpope/vim-dispatch'
 
 " Lazy
 NeoBundleLazy 'OmniSharp/omnisharp-vim', {
@@ -63,6 +67,7 @@ NeoBundleLazy 'OmniSharp/omnisharp-vim', {
       \     'unix': 'xbuild server/OmniSharp.sln',
       \   },
       \ }
+NeoBundleLazy 'OrangeT/vim-csharp', { 'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] } }
 
 call neobundle#end()
 
